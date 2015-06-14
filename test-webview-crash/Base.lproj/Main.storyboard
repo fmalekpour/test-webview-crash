@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dJ-1R-IAD">
+                                <rect key="frame" x="0.0" y="510" width="600" height="90"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awR-e0-sOi">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="90"/>
+                                        <color key="backgroundColor" red="0.85440822959999996" green="0.72351022170000001" blue="0.458163178" alpha="1" colorSpace="calibratedRGB"/>
+                                    </webView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.61568627450000002" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="awR-e0-sOi" secondAttribute="bottom" id="3C1-cB-uQb"/>
+                                    <constraint firstAttribute="trailing" secondItem="awR-e0-sOi" secondAttribute="trailing" id="6UW-21-AO3"/>
+                                    <constraint firstItem="awR-e0-sOi" firstAttribute="leading" secondItem="8dJ-1R-IAD" secondAttribute="leading" id="P6S-a7-bFR"/>
+                                    <constraint firstAttribute="height" constant="90" id="cLu-rb-onj"/>
+                                    <constraint firstItem="awR-e0-sOi" firstAttribute="top" secondItem="8dJ-1R-IAD" secondAttribute="top" id="fGN-dC-c62"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcv-Kz-Npy">
+                                <rect key="frame" x="277" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="URj-IQ-V08"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pcv-Kz-Npy" firstAttribute="centerX" secondItem="8dJ-1R-IAD" secondAttribute="centerX" id="3Iz-RM-9k4"/>
+                            <constraint firstItem="8dJ-1R-IAD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="9od-UU-aYe"/>
+                            <constraint firstAttribute="trailing" secondItem="8dJ-1R-IAD" secondAttribute="trailing" id="JKp-tT-CHH"/>
+                            <constraint firstItem="pcv-Kz-Npy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="PlR-9X-AXL"/>
+                            <constraint firstItem="8dJ-1R-IAD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eCu-y5-uiH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="awR-e0-sOi" id="iDl-uM-KWC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491" y="408"/>
+        </scene>
+    </scenes>
+</document>
