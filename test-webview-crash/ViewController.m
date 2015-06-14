@@ -31,7 +31,9 @@
 - (IBAction)testButtonClicked:(id)sender
 {
 	NSString *path = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"test01.html"];
+	
 	[self.webView loadHTMLString:[NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL] baseURL:[NSURL URLWithString:@"https://googleads.g.doubleclick.net/"]];
+	
 	
 	
 }
