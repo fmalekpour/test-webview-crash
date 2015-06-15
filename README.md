@@ -52,3 +52,9 @@ This app demonstrates the WebTread bug that caused the crash in iOS, here is the
 		frame #45: 0x02f76e13 libsystem_pthread.dylib`_pthread_body + 138
 		frame #46: 0x02f76d89 libsystem_pthread.dylib`_pthread_start + 162
 		frame #47: 0x02f74e52 libsystem_pthread.dylib`thread_start + 34
+
+# Workarounds #1
+Instead of reload the UIWebView, destroy it comletely, create a new one and load on the newlu create webView.
+
+# Workarounds #2
+Use WKWebView instead, memory usage is much lower, does not have leak and almost bug free, at least does not cause this app to crash. 
